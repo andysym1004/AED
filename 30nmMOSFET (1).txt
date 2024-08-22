@@ -62,7 +62,7 @@ AdvancedCalibration  ;# Advanced Calibration is a selection of models and parame
 	
 	struct smesh= n@node@_gate							;# Save mesh file
 	
-# Remesh
+# Remesh (finer mesh)
 # ------
 
 	refinebox min = {-0.2 0} max = {0.2 2.03} xrefine = 0.005 yrefine = 0.005
@@ -84,12 +84,12 @@ AdvancedCalibration  ;# Advanced Calibration is a selection of models and parame
 	
 	struct smesh= n@node@_spacers							;# Save mesh file
 	
-# Remesh (try a few times for a good mesh)
+# Remesh (finer mesh)
 # ------
 
 	refinebox min = {0 0.5} max = {0.3 1.006} xrefine = 0.02 yrefine = 0.02 
 	refinebox min = {0 1.24} max = {0.3 1.53} xrefine = 0.02 yrefine = 0.02
-	refinebox min = {0 1.006} max = {0.3 1.24} xrefine = 0.005 yrefine = 0.005
+	refinebox min = {0 1.006} max = {0.3 1.24} xrefine = 0.005 yrefine = 0.005     ;#channel and gate area remeshed more finely 
 	grid remesh
 
 
