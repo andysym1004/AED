@@ -39,9 +39,9 @@
 # Create contacts
 #----------------
 
-	(sdegeo:define-contact-set "gate" 4  (color:rgb 1 0 0 ) "##")								;# Gate contact
-	(sdegeo:define-contact-set "drain" 4  (color:rgb 0 0 1 ) "||")							;# Drain contact
-	(sdegeo:define-contact-set "source" 4  (color:rgb 0 1 0 ) "==")						;# Source contact
+	(sdegeo:define-contact-set "gate" 4  (color:rgb 1 0 0 ) "##")				;# Gate contact
+	(sdegeo:define-contact-set "drain" 4  (color:rgb 0 0 1 ) "||")				;# Drain contact
+	(sdegeo:define-contact-set "source" 4  (color:rgb 0 1 0 ) "==")				;# Source contact
 	(sdegeo:define-contact-set "substrate" 4  (color:rgb 1 1 0 ) "//")			;# Substrate contact
 
 # Set contacts
@@ -75,7 +75,7 @@
 	(sdedr:define-constant-profile "Constant.Drain" "ArsenicActiveConcentration" 1e+18)
 	(sdedr:define-constant-profile-region "PlaceCD.Drain" "Constant.Drain" "Drain")
 
-# Analytical Doping (doping changed, geometry changed) (CHANGE**********)
+# Analytical Doping (doping changed, geometry changed)
 #------------------
 
 	(sdedr:define-refeval-window "BaseLine.FinLeft" "Rectangle"  (position -0.017 -0.01 0)  (position -0.017 0.01 0.012) )
@@ -86,7 +86,7 @@
 	(sdedr:define-analytical-profile-placement "PlaceAP.FinRight" "Gauss.FinRight" "BaseLine.FinRight" "Both" "NoReplace" "Eval")
 	(sdedr:define-gaussian-profile "Gauss.FinRight" "ArsenicActiveConcentration" "PeakPos" 0  "PeakVal" 1e+18 "ValueAtDepth" 2e+15 "Depth" 0.003 "Gauss"  "Factor" 0.8)
 
-# Mesh Refinement (HAVE A LOOK)
+# Mesh Refinement
 #----------------
 
 	# Global mesh refinement
